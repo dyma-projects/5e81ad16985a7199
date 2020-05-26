@@ -1,10 +1,10 @@
-import { Directive, HostListener, HostBinding, Renderer2, ElementRef } from '@angular/core';
+import { Directive, HostListener, Renderer2, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appColor]'
 })
 export class ColorDirective {
-  @HostListener('window:keydown', ['$event']) windowClick($event:KeyboardEvent) {
+  @HostListener('window:keydown', ['$event']) windowKeyDown($event:KeyboardEvent) {
     switch ($event.key) {
       case 'ArrowUp':
         this.setColor('red');
